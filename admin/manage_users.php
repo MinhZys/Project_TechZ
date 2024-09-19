@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("../config/db.php");
-
+include("header.php");
 // Kiểm tra quyền truy cập
 if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
     header("Location: ../login/login.php");
@@ -67,6 +67,69 @@ $result = $conn->query("SELECT * FROM user");
 <head>
     <meta charset="UTF-8">
     <title>Quản Lý Người Dùng</title>
+
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="password"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <h2>Quản Lý Người Dùng</h2>
@@ -88,7 +151,7 @@ $result = $conn->query("SELECT * FROM user");
                 <td><?php echo $row['role']; ?></td>
                 <td><?php echo $row['number_phone']; ?></td>
                 <td>
-                    <a href="?edit=<?php echo $row['user_id']; ?>">Chỉnh Sửa</a>
+<a href="?edit=<?php echo $row['user_id']; ?>">Chỉnh Sửa</a>
                     <a href="?delete=<?php echo $row['user_id']; ?>">Xóa</a>
                 </td>
             </tr>

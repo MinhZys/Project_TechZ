@@ -42,43 +42,7 @@
         <p>Select a menu item to see more information.</p>
     </div>
 
-    <script>
-        function loadContent(page) {
-            let contentArea = document.getElementById('content-area');
-
-            switch(page) {
-                case 'products':
-                    fetch('./views/Products.php')
-                        .then(response => {
-                            if (!response.ok) {
-                                throw new Error('Network response was not ok');
-                            }
-                            return response.text();
-                        })
-                        .then(data => {
-                            contentArea.innerHTML = data;
-                        })
-                        .catch(error => {
-                            contentArea.innerHTML = '<h2>Error loading content</h2><p>' + error.message + '</p>';
-                        });
-                    break;
-                case 'integrations':
-                    contentArea.innerHTML = '<h2>Integrations</h2><p>Learn about our integrations.</p>';
-                    break;
-                case 'services':
-                    contentArea.innerHTML = '<h2>Services</h2><p>Explore the services we offer.</p>';
-                    break;
-                case 'shipping':
-                    contentArea.innerHTML = '<h2>Shipping</h2><p>Details about our shipping options.</p>';
-                    break;
-                case 'help':
-                    contentArea.innerHTML = '<h2>Help</h2><p>Find answers to your questions.</p>';
-                    break;
-                default:
-                    contentArea.innerHTML = '<h2>Welcome to PrintDoors</h2><p>Select a menu item to see more information.</p>';
-            }
-        }
-    </script>
+    
       <!-- Banner chính -->
       <section class="main-banner">
         <div class="banner-content">
@@ -96,6 +60,9 @@
             <img src="banner-image.png" alt="Shipping Image">
         </div>
     </section>
+    <?php
+    include_once("./admin/put_footer.php");
+    ?>
 
 </body>
 </html>

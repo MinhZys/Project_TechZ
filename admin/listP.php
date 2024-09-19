@@ -1,6 +1,7 @@
 <?php
 // Kết nối đến CSDL
-include '../../config/db.php';
+include '../config/db.php';
+include("../admin/header.php");
 
 // Câu lệnh SQL để lấy dữ liệu từ bảng product, category, brand và material
 $sql_lietke_sp = "
@@ -27,7 +28,7 @@ if (mysqli_num_rows($query_lietke_sp) > 0) {
             <th>Tên sản phẩm</th>
             <th>Hình ảnh</th>
             <th>Giá sp</th>
-            <th>Danh mục</th>
+            <th>Danh mục</th>D
             <th>Thương hiệu</th>
             <th>Tên vật liệu</th>
             <th>Tóm tắt</th>
@@ -53,7 +54,7 @@ if (mysqli_num_rows($query_lietke_sp) > 0) {
                 </td>
             </tr>
             <?php
-        }
+        }s
         ?>
     </table>
     <?php
