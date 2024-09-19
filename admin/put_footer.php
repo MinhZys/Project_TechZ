@@ -1,15 +1,4 @@
 <?php
-session_start(); // Bắt đầu phiên làm việc
-
-// Kiểm tra xem người dùng đã đăng nhập chưa
-if (!isset($_SESSION['username'])) {
-    // Nếu chưa đăng nhập, bạn có thể điều hướng về trang đăng nhập hoặc hiển thị thông báo
-    header('Location: ../login/login.php');
-    exit();
-}
-?>
-
-<?php
 function putFooter() {
     // In ra HTML của phần footer
     echo '<footer>';
