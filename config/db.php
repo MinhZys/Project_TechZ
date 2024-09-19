@@ -8,9 +8,4 @@ $password = ''; // Mật khẩu MySQL (thay đổi nếu cần)
 // Tạo kết nối MySQL
 $conn = new mysqli($host, $username, $password, $dbname);
 
-// Kiểm tra kết nối
-if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
-}
-echo "Kết nối thành công với cơ sở dữ liệu decorvista!";
-?>
+
