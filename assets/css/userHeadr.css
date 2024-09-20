@@ -1,0 +1,34 @@
+/* Tùy chỉnh CSS */
+.navbar-brand img {
+    width: 200px;
+    height: auto;
+}
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+}
+.dropdown-menu:hover {
+    display: none; /* Ban đầu ẩn */
+}
+.nav-item:hover .dropdown-menu {
+    background-color:black;
+    display: block; /* Hiện sub-menu khi hover */
+    border-width: 50px;
+}
+/* Bỏ mũi tên mặc định trong dropdown */
+.dropdown-toggle::after {
+    display: none !important; /* Ẩn mũi tên */
+}
+.auth-buttons {
+    margin-right: 50%;
+    display: flex;
+    align-items: center;
+}
+.auth-buttons a {
+    margin-left: 20px;
+}
+
