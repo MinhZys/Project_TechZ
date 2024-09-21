@@ -4,17 +4,20 @@ include("../config/db.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $passwordd = $_POST['password'];
+
 
     // Kết nối đến cơ sở dữ liệu
     $stmt = $conn->prepare("SELECT * FROM user WHERE user_name = ?");
     $stmt->bind_param("s", $username);
+    // $stmt->bind_param("s", $passwordd);
     $stmt->execute();
     $result = $stmt->get_result();
     
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
-        if (password_verify($password, $user['password'])) {
+        if (password_verify($passwordd, $user['password'])) {
+            $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['username'] = $username;
             $_SESSION['role'] = $user['role'];
 

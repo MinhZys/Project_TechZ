@@ -1,0 +1,179 @@
+.product-card {
+    /* transition: all 0.3s ease;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   min-height: 45%; 
+    width: 100%;
+    max-width: 300px; /* Đặt chiều rộng tối đa */
+    height: auto;
+    border: 1px solid #ddd; /* Viền cho khung */
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng bóng */
+    border-radius: 10px; /* Tạo bo góc mềm mại */
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+.product img {
+    max-width: 50px; /* Giới hạn chiều rộng tối đa của hình ảnh */
+    max-height: 80px;
+    object-fit: cover;
+}
+
+
+.product .product-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+    height: 3.6em; /* Tối đa 3 dòng với chiều cao cố định */
+    overflow: hidden; /* Ẩn phần văn bản vượt quá */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Giới hạn tối đa 3 hàng */
+    -webkit-box-orient: vertical;
+}
+
+.product .price {
+    color: #f00;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.product .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff6f61;
+    padding: 5px 10px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.product a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.add-to-cart-btn {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #218838;
+    color: white;
+}
+
+.product-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    text-align: center;
+}
+.product-name {
+    color: black;
+}
+@media (max-width: 768px) {
+    .product-card {
+        max-width: 100%; /* Đảm bảo khung chiếm toàn bộ màn hình trên thiết bị nhỏ */
+    }
+
+    .product-card img {
+        height: 150px; /* Giảm chiều cao hình ảnh trên thiết bị nhỏ */
+    }
+}
+
+
+.price {
+    color: black;
+}     
+
+
+
+@media (max-width: 768px) {
+    .product-card {
+        max-width: 100%; /* Cho phép khung sản phẩm mở rộng toàn bộ chiều rộng trên thiết bị nhỏ */
+        min-height: 450px; /* Giảm chiều cao tối thiểu trên thiết bị nhỏ */
+    }
+
+    .product-card img {
+        height: 150px; /* Giảm chiều cao của hình ảnh trên thiết bị nhỏ */
+    }
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px; /* Đặt chiều rộng tối đa */
+    min-height: 500px; /* Chiều cao tối thiểu cho thẻ */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; /* Chiều cao cố định cho hình ảnh */
+    object-fit: cover; /* Giữ tỷ lệ hình ảnh và cắt nếu cần */
+}
+
+.product-body {
+    flex-grow: 1;
+    text-align: center;
+    padding: 15px;
+}
+
+.product-name {
+    min-height: 60px; /* Đảm bảo tên sản phẩm có chiều cao nhất định */
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+}
+
+.product-name {
+    color: black; /* Đổi màu chữ thành đen */
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+    height: 3.6em; /* Tối đa 3 dòng với chiều cao cố định */
+    overflow: hidden; /* Ẩn phần văn bản vượt quá */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.add-to-cart-btn {
+    background-color: #bca87c; /* Đổi màu nút thành #bca87c */
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #a8936d; /* Màu khi hover có thể điều chỉnh tương tự */
+    color: white;
+}

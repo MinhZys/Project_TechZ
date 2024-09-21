@@ -1,0 +1,42 @@
+Tùy chỉnh CSS
+.navbar-brand img {
+    width: 200px;
+    height: auto;
+}
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+}
+
+/* Bỏ mũi tên mặc định trong dropdown */
+.dropdown-toggle::after {
+    display: none !important; /* Ẩn mũi tên */
+}
+.auth-buttons {
+    margin-right: 50%;
+    display: flex;
+    align-items: center;
+}
+.auth-buttons a {
+    margin-left: 20px;
+}
+
+
+/* Tùy chỉnh biểu tượng giỏ hàng */
+.nav-link .bi-cart-fill {
+    font-size: 1.5rem; /* Tăng kích thước biểu tượng */
+}
+
+/* Tùy chỉnh huy hiệu (badge) hiển thị số lượng sản phẩm */
+.nav-link .badge {
+    position: relative;
+    top: -10px;
+    left: -5px;
+    font-size: 0.8rem;
+    border-radius: 50%;
+}
+
