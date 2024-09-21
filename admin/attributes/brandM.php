@@ -1,7 +1,10 @@
 <?php
 // Kết nối đến CSDL
 include '../../config/db.php';
+<<<<<<< HEAD
 include 'index_attributes.php';
+=======
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 
 // Kiểm tra nếu có id trong URL, thì sẽ là sửa brand
 if (isset($_GET['idb'])) {
@@ -15,7 +18,11 @@ if (isset($_GET['idb'])) {
 // Thêm hoặc sửa brand nếu có yêu cầu
 if (isset($_POST['save_brand'])) {
     $name = mysqli_real_escape_string($conn, $_POST['brand_name']);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
     if (isset($_GET['idb'])) {
         // Sửa brand
         $sql_update = "UPDATE brand SET name = '$name' WHERE brand_id = $id";
@@ -56,7 +63,10 @@ $query_lietke_br = mysqli_query($conn, $sql_lietke_br);
 
 <!DOCTYPE html>
 <html lang="vi">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,19 +95,33 @@ $query_lietke_br = mysqli_query($conn, $sql_lietke_br);
         }
     </style>
 </head>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 <body>
 
     <div class="header">
         <h1>Quản lý thương hiệu</h1>
+<<<<<<< HEAD
 
+=======
+        <!-- Nút Quay lại trang chính -->
+        <div class="back-button">
+            <button onclick="window.location.href='index.php'">Quay lại trang chính</button>
+        </div>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
     </div>
 
     <!-- Form thêm hoặc sửa thương hiệu -->
     <form method="POST" action="">
         <label for="brand_name"><?php echo isset($_GET['idb']) ? 'Sửa thương hiệu' : 'Tên thương hiệu mới'; ?>:</label>
+<<<<<<< HEAD
         <input type="text" id="brand_name" name="brand_name"
             value="<?php echo isset($brand) ? htmlspecialchars($brand['name']) : ''; ?>" required>
+=======
+        <input type="text" id="brand_name" name="brand_name" value="<?php echo isset($brand) ? htmlspecialchars($brand['name']) : ''; ?>" required>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
         <button type="submit" name="save_brand"><?php echo isset($_GET['idb']) ? 'Cập nhật' : 'Thêm'; ?></button>
     </form>
 
@@ -117,8 +141,12 @@ $query_lietke_br = mysqli_query($conn, $sql_lietke_br);
                     <td><?php echo htmlspecialchars($row['name']); ?></td>
                     <td>
                         <a href="brandM.php?idb=<?php echo urlencode($row['brand_id']); ?>">Sửa</a> |
+<<<<<<< HEAD
                         <a href="brandM.php?deleteb=<?php echo urlencode($row['brand_id']); ?>" class="delete-button"
                             onclick="return confirm('Bạn có chắc chắn muốn xóa thương hiệu này?')">Xóa</a>
+=======
+                        <a href="brandM.php?deleteb=<?php echo urlencode($row['brand_id']); ?>" class="delete-button" onclick="return confirm('Bạn có chắc chắn muốn xóa thương hiệu này?')">Xóa</a>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
                     </td>
                 </tr>
                 <?php
@@ -130,5 +158,9 @@ $query_lietke_br = mysqli_query($conn, $sql_lietke_br);
     </table>
 
 </body>
+<<<<<<< HEAD
 
 </html>
+=======
+</html>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292

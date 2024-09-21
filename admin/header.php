@@ -84,19 +84,35 @@
         </div>
     </header>
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
     <nav>
         <div class="container">
             <ul>
                 <li><a href="manage_users.php" class="admin-link">Quản Lý Người Dùng</a></li>
                 <li><a href="product.php" class="admin-link">Quản Lý Sản Phẩm</a></li>
                 <li><a href="ideallibrary.php" class="admin-link">Quản Lý Thư Viện Ý Tưởng  </a></li>
+<<<<<<< HEAD
                 <li><a href="../admin/attributes/index_attributes.php" class="admin-link">Quản Lý Phan Loai</a></li>
+=======
+                <li><a href="index_attributes.php" class="admin-link">Quản Lý Phan Loai</a></li>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
                 <li><a href="../profile/profile.php" class="admin-link">Quản Lý profile</a></li>
                 <li><a href="../login/login.php" class="admin-link">Đăng xuất</a></li>
 </ul>
         </div>
     </nav>
+<<<<<<< HEAD
 
+=======
+    
+    <main class="container">
+        <section class="welcome-message">
+            <h2>Chào mừng đến với trang quản trị!</h2>
+        </section>
+    </main>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 </body>
 </html>

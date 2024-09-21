@@ -2,8 +2,13 @@
 session_start();
 include("../config/db.php");
 include("../admin/header.php");
+<<<<<<< HEAD
 
 // Kiểm tra quyền truy cập
+=======
+// Kiểm tra quyền truy cập
+
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 
 // Xử lý xóa người dùng
 if (isset($_GET['delete'])) {
@@ -64,6 +69,7 @@ $result = $conn->query("SELECT * FROM user");
 <head>
     <meta charset="UTF-8">
     <title>Quản Lý Người Dùng</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="../assets/css/manage_users.css">
 </head>
 <body>
@@ -97,6 +103,98 @@ $result = $conn->query("SELECT * FROM user");
                 <?php endwhile; ?>
             </tbody>
         </table>
+=======
+
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+input[type="text"], input[type="email"], input[type="password"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Quản Lý Người Dùng</h2>
+    <h3>Danh Sách Người Dùng</h3>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Tên Đăng Nhập</th>
+            <th>Email</th>
+            <th>Vai Trò</th>
+            <th>Số Điện Thoại</th>
+            <th>Hành Động</th>
+        </tr>
+        <?php while ($row = $result->fetch_assoc()): ?>
+            <tr>
+                <td><?php echo $row['user_id']; ?></td>
+                <td><?php echo $row['user_name']; ?></td>
+                <td><?php echo $row['email_address']; ?></td>
+                <td><?php echo $row['role']; ?></td>
+                <td><?php echo $row['number_phone']; ?></td>
+                <td>
+<a href="?edit=<?php echo $row['user_id']; ?>">Chỉnh Sửa</a>
+                    <a href="?delete=<?php echo $row['user_id']; ?>">Xóa</a>
+                </td>
+            </tr>
+        <?php endwhile; ?>
+    </table>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 
         <h3>Thêm Người Dùng</h3>
         <form method="post">
@@ -131,8 +229,13 @@ $result = $conn->query("SELECT * FROM user");
             <input type="text" name="user_name" value="<?php echo $user['user_name']; ?>" required>
             
             <label for="email_address">Email:</label>
+<<<<<<< HEAD
             <input type="email" name="email_address" value="<?php echo $user['email_address']; ?>" required>
             
+=======
+<input type="email" name="email_address" value="<?php echo $user['email_address']; ?>" required>
+            <br>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
             <label for="role">Vai trò:</label>
             <select name="role">
                 <option value="admin" <?php echo $user['role'] == 'admin' ? 'selected' : ''; ?>>Admin</option>

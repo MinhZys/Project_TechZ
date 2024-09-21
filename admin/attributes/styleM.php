@@ -1,8 +1,11 @@
 <?php
 // Kết nối đến CSDL
 include '../../config/db.php';
+<<<<<<< HEAD
 include 'index_attributes.php';
 
+=======
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 
 // Kiểm tra nếu có id trong URL, thì sẽ là sửa style
 if (isset($_GET['idstyle'])) {
@@ -106,7 +109,14 @@ $stmt_lietke->close();
 
     <div class="header">
         <h1>Quản lý Style</h1>
+<<<<<<< HEAD
 
+=======
+        <!-- Nút Quay lại trang chính -->
+        <div class="back-button">
+            <button onclick="window.location.href='index.php'">Quay lại trang chính</button>
+        </div>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
     </div>
 
     <!-- Form thêm hoặc sửa style -->

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Tùy chỉnh CSS
+=======
+/* Tùy chỉnh CSS */
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 .navbar-brand img {
     width: 200px;
     height: auto;
@@ -11,7 +15,18 @@ Tùy chỉnh CSS
 .navbar-nav .nav-link {
     padding: 0.5rem 1rem;
 }
+<<<<<<< HEAD
 
+=======
+.dropdown-menu:hover {
+    display: none; /* Ban đầu ẩn */
+}
+.nav-item:hover .dropdown-menu {
+    background-color:black;
+    display: block; /* Hiện sub-menu khi hover */
+    border-width: 50px;
+}
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 /* Bỏ mũi tên mặc định trong dropdown */
 .dropdown-toggle::after {
     display: none !important; /* Ẩn mũi tên */
@@ -25,6 +40,7 @@ Tùy chỉnh CSS
     margin-left: 20px;
 }
 
+<<<<<<< HEAD
 
 /* Tùy chỉnh biểu tượng giỏ hàng */
 .nav-link .bi-cart-fill {
@@ -40,3 +56,5 @@ Tùy chỉnh CSS
     border-radius: 50%;
 }
 
+=======
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292

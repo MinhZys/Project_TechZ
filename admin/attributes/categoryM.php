@@ -1,7 +1,10 @@
 <?php
 // Kết nối đến CSDL
 include '../../config/db.php';
+<<<<<<< HEAD
 include 'index_attributes.php';
+=======
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 
 // Kiểm tra nếu có id trong URL, thì sẽ là sửa danh mục
 if (isset($_GET['idc'])) {
@@ -15,7 +18,11 @@ if (isset($_GET['idc'])) {
 // Thêm hoặc sửa category nếu có yêu cầu
 if (isset($_POST['save_category'])) {
     $name = mysqli_real_escape_string($conn, $_POST['category_name']);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
     if (isset($_GET['idc'])) {
         // Sửa danh mục
         // Sử dụng Prepared Statements để bảo mật
@@ -65,7 +72,10 @@ $query_lietke_dm = mysqli_query($conn, $sql_lietke_dm);
 
 <!DOCTYPE html>
 <html lang="vi">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -95,19 +105,33 @@ $query_lietke_dm = mysqli_query($conn, $sql_lietke_dm);
         }
     </style>
 </head>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 <body>
 
     <div class="header">
         <h1>Quản lý danh mục</h1>
+<<<<<<< HEAD
 
+=======
+        <!-- Nút Quay lại trang chính -->
+        <div class="back-button">
+            <button onclick="window.location.href='index.php'">Quay lại trang chính</button>
+        </div>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
     </div>
 
     <!-- Form thêm hoặc sửa danh mục -->
     <form method="POST" action="">
         <label for="category_name"><?php echo isset($_GET['idc']) ? 'Sửa danh mục' : 'Tên danh mục mới'; ?>:</label>
+<<<<<<< HEAD
         <input type="text" id="category_name" name="category_name"
             value="<?php echo isset($category) ? htmlspecialchars($category['name']) : ''; ?>" required>
+=======
+        <input type="text" id="category_name" name="category_name" value="<?php echo isset($category) ? htmlspecialchars($category['name']) : ''; ?>" required>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
         <button type="submit" name="save_category"><?php echo isset($_GET['idc']) ? 'Cập nhật' : 'Thêm'; ?></button>
     </form>
 
@@ -127,9 +151,13 @@ $query_lietke_dm = mysqli_query($conn, $sql_lietke_dm);
                     <td><?php echo htmlspecialchars($row['name']); ?></td>
                     <td>
                         <a href="categoryM.php?idc=<?php echo urlencode($row['category_id']); ?>" class="btn-action">Sửa</a> |
+<<<<<<< HEAD
                         <a href="categoryM.php?deletec=<?php echo urlencode($row['category_id']); ?>"
                             class="btn-action delete-button"
                             onclick="return confirm('Bạn có chắc chắn muốn xóa danh mục này?')">Xóa</a>
+=======
+                        <a href="categoryM.php?deletec=<?php echo urlencode($row['category_id']); ?>" class="btn-action delete-button" onclick="return confirm('Bạn có chắc chắn muốn xóa danh mục này?')">Xóa</a>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
                     </td>
                 </tr>
                 <?php
@@ -141,5 +169,9 @@ $query_lietke_dm = mysqli_query($conn, $sql_lietke_dm);
     </table>
 
 </body>
+<<<<<<< HEAD
 
 </html>
+=======
+</html>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292

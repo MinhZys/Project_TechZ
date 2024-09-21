@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 include '../config/db.php'; // Kết nối cơ sở dữ liệu
 include"../user/userHeader.php";
@@ -37,13 +38,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['product_id'])) {
     // Thông báo đã thêm vào giỏ hàng (có thể thay đổi thành thông báo thân thiện hơn)
     echo "<script>alert('Sản phẩm đã được thêm vào giỏ hàng!');</script>";
 }
+=======
+include '../config/db.php';
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 
 // Truy vấn lấy dữ liệu sản phẩm từ bảng product
 $sql = "SELECT * FROM product";
 $result = $conn->query($sql);
 ?>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -69,8 +76,12 @@ $result = $conn->query($sql);
                 <?php endif; ?>
                 
                 <div class="col-md-2 d-flex justify-content-center mb-4">
+<<<<<<< HEAD
                 <a href="product_detail.php?id=<?php echo $row['id']; ?>" class="text-decoration-none">
 
+=======
+                    <a href="product_detail.php?id=<?php echo $row['id']; ?>" class="text-decoration-none">
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
                         <div class="card product-card position-relative">
                             <!-- Hiển thị badge "New" hoặc "Trending" -->
                             <?php if ($row['price'] > 50000): ?>
@@ -80,7 +91,11 @@ $result = $conn->query($sql);
                             <?php endif; ?>
 
                             <!-- Hiển thị hình ảnh sản phẩm -->
+<<<<<<< HEAD
                             <img src="../admin/image/<?php echo $row['image_url']; ?>" alt="<?php echo $row['name']; ?>" class="card-img-top">
+=======
+                            <img src="../admin/productM/image/<?php echo $row['image_url']; ?>" alt="<?php echo $row['name']; ?>" class="card-img-top">
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 
                             <div class="card-body product-body">
                                 <!-- Hiển thị tên sản phẩm -->
@@ -90,7 +105,11 @@ $result = $conn->query($sql);
                                 <p class="price">$<?php echo number_format($row['price'], 2); ?></p>
 
                                 <!-- Nút 'Add to Cart' canh giữa -->
+<<<<<<< HEAD
                                 <form method="POST" class="d-flex justify-content-center align-items-center mt-3">
+=======
+                                <form action="cart.php" method="POST" class="d-flex justify-content-center align-items-center mt-3">
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
                                     <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
                                     <button type="submit" class="btn add-to-cart-btn">Thêm vào giỏ</button>
                                 </form>

@@ -66,11 +66,19 @@ include("./userHeader.php");
                 <source src="../assets/images/9583751-uhd_3840_2160_25fps.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+<<<<<<< HEAD
             <div class="text-overlay"></div>
+=======
+            <div class="text-overlay">Your Text Here</div>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
         </div>
     </div>
 </body>
 </html>
 <?php
+<<<<<<< HEAD
 
+=======
+include("./userProduct.php");
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 ?>

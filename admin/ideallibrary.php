@@ -262,7 +262,87 @@ $result_list = mysqli_query($conn, $sql_list) or die("Lỗi khi thực thi truy 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý Thư viện Ý tưởng</title>
     <link rel="stylesheet" href="../assets/css/ideallibrary.css">
+<<<<<<< HEAD
 
+=======
+    <!-- <style>
+        /* Add any additional inline styles here if necessary */
+        .message {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .actions a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .actions a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            margin-top: 15px;
+            padding: 10px 20px;
+        }
+
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style> -->
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 </head>
 
 <body>

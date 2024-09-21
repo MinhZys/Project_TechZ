@@ -1,8 +1,11 @@
 <?php
 // Kết nối đến CSDL
 include '../../config/db.php';
+<<<<<<< HEAD
 include 'index_attributes.php';
 
+=======
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 
 // Kiểm tra nếu có id trong URL, thì sẽ là sửa color coordination
 if (isset($_GET['idco'])) {
@@ -69,7 +72,10 @@ $query_lietke_coordination = mysqli_query($conn, $sql_lietke_coordination);
 ?>
 <!DOCTYPE html>
 <html lang="vi">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,12 +105,22 @@ $query_lietke_coordination = mysqli_query($conn, $sql_lietke_coordination);
         }
     </style>
 </head>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 <body>
 
     <div class="header">
         <h1>Quản lý Color Coordination</h1>
+<<<<<<< HEAD
 
+=======
+        <!-- Nút Quay lại trang chính -->
+        <div class="back-button">
+            <button onclick="window.location.href='index.php'">Quay lại trang chính</button>
+        </div>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
     </div>
 
     <!-- Form thêm hoặc sửa color coordination -->
@@ -112,6 +128,7 @@ $query_lietke_coordination = mysqli_query($conn, $sql_lietke_coordination);
         <label for="coordination_name">
             <?php echo isset($_GET['idco']) ? 'Sửa Color Coordination' : 'Tên Color Coordination mới'; ?>:
         </label>
+<<<<<<< HEAD
         <input type="text" id="coordination_name" name="coordination_name"
             value="<?php echo isset($coordination) ? htmlspecialchars($coordination['coordination_name']) : ''; ?>"
             required>
@@ -119,6 +136,12 @@ $query_lietke_coordination = mysqli_query($conn, $sql_lietke_coordination);
         <label for="description">Mô tả:</label>
         <textarea id="description" name="description" rows="4"
             required><?php echo isset($coordination) ? htmlspecialchars($coordination['description']) : ''; ?></textarea>
+=======
+        <input type="text" id="coordination_name" name="coordination_name" value="<?php echo isset($coordination) ? htmlspecialchars($coordination['coordination_name']) : ''; ?>" required>
+
+        <label for="description">Mô tả:</label>
+        <textarea id="description" name="description" rows="4" required><?php echo isset($coordination) ? htmlspecialchars($coordination['description']) : ''; ?></textarea>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
 
         <button type="submit" name="save_coordination">
             <?php echo isset($_GET['idco']) ? 'Cập nhật' : 'Thêm'; ?>
@@ -142,11 +165,16 @@ $query_lietke_coordination = mysqli_query($conn, $sql_lietke_coordination);
                     <td><?php echo htmlspecialchars($row['coordination_name']); ?></td>
                     <td><?php echo htmlspecialchars($row['description']); ?></td>
                     <td>
+<<<<<<< HEAD
                         <a href="coordinationM.php?idco=<?php echo urlencode($row['coordination_id']); ?>"
                             class="action-link">Sửa</a> |
                         <a href="coordinationM.php?deleteco=<?php echo urlencode($row['coordination_id']); ?>"
                             class="action-link delete-button"
                             onclick="return confirm('Bạn có chắc chắn muốn xóa Color Coordination này?')">Xóa</a>
+=======
+                        <a href="coordinationM.php?idco=<?php echo urlencode($row['coordination_id']); ?>" class="action-link">Sửa</a> |
+                        <a href="coordinationM.php?deleteco=<?php echo urlencode($row['coordination_id']); ?>" class="action-link delete-button" onclick="return confirm('Bạn có chắc chắn muốn xóa Color Coordination này?')">Xóa</a>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
                     </td>
                 </tr>
                 <?php
@@ -158,5 +186,9 @@ $query_lietke_coordination = mysqli_query($conn, $sql_lietke_coordination);
     </table>
 
 </body>
+<<<<<<< HEAD
 
 </html>
+=======
+</html>
+>>>>>>> 4b3d920203f035acd5c5be55213b14e62b523292
